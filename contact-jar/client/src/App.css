@@ -1,0 +1,11 @@
+
+.contact-card {
+  position: relative;
+}
+
+.type-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
