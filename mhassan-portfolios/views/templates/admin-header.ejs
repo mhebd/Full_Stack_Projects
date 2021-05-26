@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M. Hassan's Portfolios | <%= title %></title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid full-site-container">
+      <header class="header fixed-top" id="header">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/" class="h3">
+                <img
+                  src="../img/cpanel/<%= cpData.logo %>"
+                  alt=""
+                  class="w-75"
+                />
+              </a>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#mainMenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="mainMenu">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="/c-panel"
+                    class="nav-link <% if(active === 'cpanel') {%> active <% } %>"
+                    >cPanel</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="/c-panel/Portfolio"
+                    class="nav-link <% if(active === 'portfolio') {%> active <% } %>"
+                    >New Portfolio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="/c-panel/social"
+                    class="nav-link <% if(active === 'social') {%> active <% } %>"
+                    >New Social</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<%- include('templates/user-header', { active : '', title : 'login'}) %>
+
+<section class="hero-wrap cp-wrap" id="hero-section">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="create-portfolio py-5">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center text-secondary">Login Now</h3>
+            </div>
+            <div class="card-body">
+              <form action="/login" class="form text-dark" method="post">
+                <div class="form-group mb-3">
+                  <label for="url">Your Email :</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                    id="email"
+                    class="email form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="cover_image">Your Password :</label>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Your Password"
+                    id="password"
+                    class="password form-control"
+                  />
+                </div>
+                <div class="form-group mb-2">
+                  <button type="submit" class="btn btn-danger">Sign Up</button>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer text-dark">
+              <p class="lead">Not A User? <a href="/signup">Sign Up Now</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('templates/footer') %>

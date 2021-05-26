@@ -1,0 +1,118 @@
+<%- include('templates/admin-header', { active : 'cpanel', title : 'C-Panel'})
+%>
+
+<section class="hero-wrap cp-wrap" id="hero-section">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="create-portfolio py-5">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center text-secondary">Control Panel</h3>
+            </div>
+            <div class="card-body">
+              <form
+                action="/c-panel"
+                class="form text-dark"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group mb-3">
+                  <label for="url">website banner :</label>
+                  <input
+                    type="text"
+                    name="banner"
+                    value="<%= cpData.banner %>"
+                    id="banner"
+                    class="banner form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="cover_image">Main Website Link :</label>
+                  <input
+                    type="text"
+                    name="main_web_link"
+                    value="<%= cpData.main_web_link %>"
+                    id="main-web-link"
+                    class="main-web-link form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="images">Fiverr Link</label>
+                  <input
+                    type="text"
+                    name="fiverr_link"
+                    value="<%= cpData.fiverr_link %>"
+                    id="fiverr-link"
+                    class="fiverr-link form-control"
+                    multiple
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="quote">Write A Quote</label>
+                  <input
+                    type="text"
+                    name="quote"
+                    value="<%= cpData.quote %>"
+                    id="quote"
+                    class="quote form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="cv_down_link">CV Downlaod Link</label>
+                  <input
+                    type="text"
+                    name="cv_down_link"
+                    value="<%= cpData.cv_down_link %>"
+                    id="cv-down-link"
+                    class="cv-down-link form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="name">Website Logo :</label>
+                  <input
+                    type="file"
+                    name="logo"
+                    id="logo"
+                    class="logo form-control"
+                    value="Website Logo"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="profile_image">Profile Image :</label>
+                  <input
+                    type="file"
+                    name="profile_image"
+                    value="Profile Image"
+                    id="profile-image"
+                    class="profile-image form-control"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="details">Profile Details</label>
+                  <textarea
+                    name="about"
+                    id="about"
+                    cols="30"
+                    rows="10"
+                    class="about form-control"
+                    value="Profile Details"
+                  >
+                          <%= cpData.about %> 
+                        </textarea
+                  >
+                </div>
+                <div class="form-group mb-2">
+                  <button type="submit" class="btn btn-danger">
+                    Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('templates/footer') %>

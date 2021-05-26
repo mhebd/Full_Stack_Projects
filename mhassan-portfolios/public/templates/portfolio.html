@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M. Hassan's Portfolios</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid full-site-container">
+      <header class="header fixed-top" id="header">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/" class="h3">M.H.P</a>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#mainMenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="mainMenu">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="/" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item"><a href="/" class="nav-link">User</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero-wrap cp-wrap" id="hero-section">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="create-portfolio py-5">
+                <div class="card">
+                  <div class="card-header">
+                    <img src="img/images/<%= portfolio.cover_image %>" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="likes-wrap">0 Likes</div>
+                    <div class="info-wrap">
+                      <div class="name">
+                        <h3 class=""><%= portfolio.name %></h3>
+                      </div>
+                      <div class="details">
+                        <p class="lead"><%= portfolio.details %></p>
+                      </div>
+                      <div class="link">
+                        <a
+                          href="<%= portfolio.url %>"
+                          class="btn btn-block btn-outline-success"
+                          >Visit This Site</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-wrapper" id="footer-section">
+        <div class="container">
+          <div class="copyright-secton">
+            <p class="lead text-center py-5">
+              &copy;
+              <script>
+                let d = new Date();
+                let y = d.getFullYear();
+                document.write(y);
+              </script>
+              All Rights Reserved -
+              <a href="#" class="text-light">M. Hassan's Portfolios</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Footer secton end -->
+    </div>
+    <!-- Full site container end -->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/all.js"></script>
+    <!-- <script src="js/ztext.js"></script> -->
+    <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

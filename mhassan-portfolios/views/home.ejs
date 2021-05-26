@@ -1,0 +1,162 @@
+<%- include('templates/user-header', { title : 'Home' }) %>
+
+
+      <section class="hero-wrap" id="hero-section">
+        <div class="container hero-container">
+          <section class="site-title-wrap">
+            <div class="brand-name">
+              <a href="#" class="h2 site-title">
+
+                <% 
+                  cpanel.banner.split('').forEach(l => {
+                    %> 
+                      <h1>
+                        <span data-z data-z-layers="8" data-z-depth="0.5em"><%= l %></span>
+                      </h1>
+                    <%
+                  })
+                %>
+
+              </a>
+            </div>
+            <div class="other-info">
+              <h1>Welcome to My <a href="#">Portfolios</a></h1>
+              <h1>Go to my Main <a href="<%= cpanel.main_web_link %>" target="_blank">Website</a></h1>
+              <h1>Hire me on <a href="<%= cpanel.fiverr_link %>" target="_blank">Fiverr</a></h1>
+            </div>
+          </section>
+
+            <div class="details">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="img/cpanel/<%= cpanel.profile_image %>" alt="" class="img-fluid" />
+                </div>
+                <div class="col-md-8">
+                  <p class="lead">Hi,</p>
+                  <p class="lead">
+                    <%= cpanel.about %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      <!-- Hero section wrapper end -->
+
+      <section class="portfolios-wrapper" id="portfolio-section">
+        <div class="container portfolios-container-wrap">
+          <aricle class="section-heading">
+            <h3>Portfolios</h3>
+          </aricle>
+
+          <div class="portfolios-wrap">
+            <div class="row no-gutters" id="portfolios">
+
+              <% portfolios.forEach( portfolio => {
+                %>
+                  <div class="col-xl-3 col-lg-4 col-md-6 portfolio">
+                    <div class="sp-container">
+                      <div class="sp-img">
+                        <img src="img/images/<%= portfolio.cover_image %>" alt="" class="img-fluid" />
+                      </div>
+                      <div class="sp-details-wrap">
+                        <div class="sp-details">
+                          <h3 class="sp-name"><%= portfolio.name %></h3>
+                          <p class="sp-desc">
+                            <%= portfolio.details.split('').splice(0, 20).join('') + '...' %>
+                          </p>
+                          <a href="/portfolios/<%= portfolio._id %>" class="btn sp-link-btn">Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <%
+              }) %>
+
+              
+            </div>
+          </div>
+          <!-- All portfolios wrapper end -->
+        </div>
+      </section>
+      <!-- Portfolios section wrapper end -->
+
+      <section class="cv-wrapper" id="cv-section">
+        <div class="container">
+          <div class="cv-container row">
+            <div class="col-lg-7 col-md-8 mb-4">
+              <p class="cv-text lead">
+                <%= cpanel.quote %>
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+              <a href="<%= cpanel.cv_down_link %>" class="btn cv-btn float-left float-md-right">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CV section wrapper end -->
+
+      <section class="social-wrapper" id="social-section">
+        <div class="container">
+          <div class="social-container row">
+
+            <% socials.forEach(social => {
+              %>
+                <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+                  <a href="<%= social.site_url %>" target="_blank" data-name="<%= social.profile_name %>" class="btn social-btn">
+                    <i class="fab fa-<%= social.icon_name %>"></i>
+                  </a>
+                </div>
+              <%
+            }) %>
+
+            <!-- <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://www.facebook.com/mehedihassanemonpro/" target="_blank" data-name="Mehedi Hassan" class="btn social-btn">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+
+
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://www.linkedin.com/in/mehedi-hassan-emon-b7b2b6174/" target="_blank" data-name="Mehedi Hassan Emon" class="btn social-btn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://twitter.com/mhemonhossain" target="_blank" data-name="Silent Boy" class="btn social-btn">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://www.instagram.com/m.h.emon.khan/" target="_blank" data-name="m.h.emon.khan" class="btn social-btn">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://github.com/mhebd" target="_blank" data-name="Mehedi Hassan" class="btn social-btn">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://dribbble.com/mhemon" target="_blank" data-name="M H EMON" class="btn social-btn">
+                <i class="fab fa-dribbble"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://medium.com/@mhemon170697" target="_blank" data-name="M H EMON" class="btn social-btn">
+                <i class="fab fa-medium"></i>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
+              <a href="https://www.pinterest.com/mehedihassanemon/" target="_blank" data-name="Mehedi Hassan Emon" class="btn social-btn">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+      <!-- Social section end -->
+
+<%- include('templates/footer') %>

@@ -1,0 +1,46 @@
+<%- include('templates/user-header', { active : 'portfolios', title :
+portfolio._id }) %>
+
+<section class="hero-wrap cp-wrap" id="hero-section">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="create-portfolio py-5">
+          <div class="card text-secondary">
+            <div class="card-header">
+              <div class="mb-3">
+                <a href="/home" class="btn btn-success">&larr; Go Back</a>
+              </div>
+              <div class="portfolio">
+                <img
+                  src="../img/images/<%= portfolio.cover_image %>"
+                  alt=""
+                  class="w-100"
+                />
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <div class="info-wrap">
+                <div class="p-name">
+                  <h3 class=""><%= portfolio.name %></h3>
+                </div>
+                <div class="p-details">
+                  <p class="lead"><%= portfolio.details %></p>
+                </div>
+                <div class="p-link">
+                  <a
+                    target="_blank"
+                    href="<%= portfolio.url %>"
+                    class="btn btn-block btn-outline-success"
+                    >Visit This Site</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('templates/footer') %>

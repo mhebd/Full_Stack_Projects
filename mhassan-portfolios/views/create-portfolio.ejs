@@ -1,0 +1,105 @@
+<%- include('templates/admin-header', { active : 'portfolio', title : 'New Portfolio'}) %>
+
+      <section class="hero-wrap cp-wrap" id="hero-section">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="create-portfolio py-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="text-center text-secondary">
+                      Create New Portfolio
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <form
+                      action="/c-panel/portfolio"
+                      class="form text-dark"
+                      method="post"
+                      enctype="multipart/form-data"
+                    >
+                      <div class="form-group mb-3">
+                        <label for="name">Website Name :</label>
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          class="name form-control"
+                          placeholder="Website Name"
+                        />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="url">website URL :</label>
+                        <input
+                          type="text"
+                          name="url"
+                          placeholder="Website URL"
+                          id="url"
+                          class="url form-control"
+                        />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="cover_image">Website Cover Image :</label>
+                        <input
+                          type="file"
+                          name="cover_image"
+                          placeholder="Website Cover Image"
+                          id="cover-image"
+                          class="cover-image form-control"
+                        />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="details">Website Details</label>
+                        <textarea
+                          name="details"
+                          id="detail"
+                          cols="30"
+                          rows="10"
+                          class="detail form-control"
+                          placeholder="Website Details"
+                        ></textarea>
+                      </div>
+                      <div class="form-group mb-2">
+                        <button type="submit" class="btn btn-danger">
+                          Create Portfolio
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-wrapper" id="footer-section">
+        <div class="container">
+          <div class="copyright-secton">
+            <p class="lead text-center py-5">
+              &copy;
+              <script>
+                let d = new Date();
+                let y = d.getFullYear();
+                document.write(y);
+              </script>
+              All Rights Reserved -
+              <a href="#" class="text-light">M. Hassan's Portfolios</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Footer secton end -->
+    </div>
+    <!-- Full site container end -->
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+    <!-- <script src="js/ztext.js"></script> -->
+    <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

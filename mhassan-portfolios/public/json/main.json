@@ -1,0 +1,161 @@
+{
+  "siteTitle": "M.Hassan's Portfolios",
+  "mainWebsite": "https://mhebd.github.io/m-hassan",
+  "fiverr": "#",
+  "portfolios": [
+    {
+      "id": 1,
+      "name": "Budgety",
+      "url": "https://mhebd.github.io/js-project/budgety",
+      "image": "01.png",
+      "details": "Budgety is a budget controller Web Application. Here you can control your budget very easily. Here are nicely decorated income list and expense list. This is very user comfortable Web Application with a beautiful UI interface.."
+    },
+    {
+      "id": 2,
+      "name": "Audio Player",
+      "url": "https://mhebd.github.io/js-project/custom-audio-player",
+      "image": "02.png",
+      "details": "Custom Audio Player is a simple audio player Web Application. Here you can listen music very easily. You can control your music very easy away. This is very user comfortable audio listening Web Application with a beautiful UI interface."
+    },
+    {
+      "id": 3,
+      "name": "Exchanger",
+      "url": "https://mhebd.github.io/js-project/exchange-rate-apps",
+      "image": "03.png",
+      "details": "Exchanger is a money rate exchanging Web Application. Here you can easily calculate any kind of money with present exchanging rate. This is very user comfortable Web Application with a beautiful UI interface"
+    },
+    {
+      "id": 4,
+      "name": "Form Validation",
+      "url": "https://mhebd.github.io/js-project/form-validation",
+      "image": "04.png",
+      "details": "With this application you can learn how to validate a web form. This is a very simple form validation application."
+    },
+    {
+      "id": 5,
+      "name": "Hang-man Game",
+      "url": "https://mhebd.github.io/js-project/hangman-game",
+      "image": "05.png",
+      "details": "Hang-man is a wonderful web based game. The rule is Guess the correct word & win the game. This is a learnable Web Based Game with a beautiful UI interface."
+    },
+    {
+      "id": 6,
+      "name": "Infinite Scroller",
+      "url": " https://mhebd.github.io/js-project/infinite-scroll-posts",
+      "image": "06.png",
+      "details": "JavaScript learning purpose."
+    },
+    {
+      "id": 7,
+      "name": "Array Method",
+      "url": "https://mhebd.github.io/js-project/js-array-method",
+      "image": "07.png",
+      "details": "JavaScript learning purpose."
+    },
+    {
+      "id": 8,
+      "name": "LuvMeter",
+      "url": "https://mhebd.github.io/js-project/luvmeter",
+      "image": "08.png",
+      "details": "LuvMeter is an entertainment based web application. Actually I build this application for entertainment, although all the questions are follow science rules. This is a user comfortable web application with a beautiful UI interface.."
+    },
+    {
+      "id": 9,
+      "name": "Lyrics Finder",
+      "url": "https://mhebd.github.io/js-project/lyrics-search-app",
+      "image": "09.png",
+      "details": "Lyrics finder is a music lyric searching web application. Here you can search by music name or artist name, and you will get music lyric. This is a user comfortable web application with a beautiful UI interface."
+    },
+    {
+      "id": 10,
+      "name": "Meal Finder",
+      "url": "https://mhebd.github.io/js-project/meal-finder",
+      "image": "10.png",
+      "details": "Meal finder is a meal recipe searchable web application. Here you can search by meal name or randomly, and you will get a meal recipe. This is a user comfortable web application with a beautiful UI interface."
+    },
+    {
+      "id": 11,
+      "name": "Memory Card",
+      "url": "https://mhebd.github.io/js-project/memory-card-styling",
+      "image": "11.png",
+      "details": "JavaScript learning purpose."
+    },
+    {
+      "id": 12,
+      "name": "Movie Ticket Booking Apps",
+      "url": "https://mhebd.github.io/js-project/movie-ticket-booking",
+      "image": "12.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 13,
+      "name": "New Year Countdown",
+      "url": "https://mhebd.github.io/js-project/new-year-countdown",
+      "image": "13.png",
+      "details": "JavaScript learning purpose. Entertainment and More..."
+    },
+    {
+      "id": 14,
+      "name": "Pig-Game",
+      "url": "https://mhebd.github.io/js-project/pigGame",
+      "image": "14.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 15,
+      "name": "Relaxer Apps",
+      "url": "https://mhebd.github.io/js-project/relaxer-app",
+      "image": "15.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 16,
+      "name": "Speed Typer",
+      "url": "https://mhebd.github.io/js-project/speed-typer-game",
+      "image": "16.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 17,
+      "name": "Text To Speek",
+      "url": "https://mhebd.github.io/js-project/text-2-speek",
+      "image": "17.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 18,
+      "name": "Video Player",
+      "url": "https://mhebd.github.io/js-project/video-player",
+      "image": "18.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 19,
+      "name": "Break-Out Game",
+      "url": "https://mhebd.github.io/js-project/breakout-game",
+      "image": "19.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 20,
+      "name": "Speech 2 Text",
+      "url": "https://mhebd.github.io/js-project/speech2text",
+      "image": "20.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 21,
+      "name": "Rich Re-Arrange",
+      "url": "https://mhebd.github.io/js-project/rich-rearrange",
+      "image": "21.png",
+      "details": "This is a very cool project. i love this project."
+    },
+    {
+      "id": 20,
+      "name": "Number Guess App",
+      "url": "https://mhebd.github.io/js-project/number-guess-app",
+      "image": "22.png",
+      "details": "This is a very cool project. i love this project."
+    }
+  ]
+}
