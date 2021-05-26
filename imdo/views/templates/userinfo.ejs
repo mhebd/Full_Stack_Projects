@@ -1,0 +1,15 @@
+<div class="user-details d-flex flex-column align-items-center mt-5">
+  <div class="user-img">
+    <a href="/user/<%= user._id %>">
+      <img
+        src="../img/user/<%= user.userImage %>"
+        alt=""
+        class="border border-2 border-success rounded-circle"
+      />
+    </a>
+  </div>
+  <div class="user-info mt-3">
+    <h3 class="name"><%= user.name %></h3>
+    <p class="small"><em><%= user.short_desc %></em></p>
+  </div>
+</div>

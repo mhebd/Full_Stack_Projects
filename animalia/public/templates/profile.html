@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animalia | Animal's House</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header Section Start -->
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark nav-wrap">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/home" class="h3 logo">Animalia</a>
+            </div>
+
+            <div class="ml-auto d-flex ml-md-1 order-1 order-md-2">
+              <ul class="navbar-nav mr-2">
+                <li class="nav-item profile-dd">
+                  <a href="#" class="nav-link"></a>
+                    <img
+                      src="../images/grid/3.a433b89d.jpg"
+                      alt=""
+                      class="img-fluid profile-avatar"
+                    />
+                  </a>
+                  <div class="profile-ddm">
+                    <a href="/" class="dropdown-item">Your Profile</a>
+                    <a href="/" class="dropdown-item">New Animal</a>
+                    <a href="/" class="dropdown-item">Log Out</a>
+                  </div>
+                </li>
+                <!-- <li class="nav-item"><a href="/" class="btn btn-danger">Login</a></li> -->
+              </ul>
+              <button
+                class="btn sm-btn"
+                data-toggle="modal"
+                data-target="#search_box"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <button
+              class="navbar-toggler order-2 ml-2"
+              data-toggle="collapse"
+              data-target="#main_menu"
+            >
+              <span class="sr-only">navbar toggler icon</span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse order-2 order-md-1"
+              id="main_menu"
+            >
+              <ul class="navbar-nav navbar-wrap ml-auto">
+                <li class="nav-item active">
+                  <a href="/home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Animals</a>
+                </li>
+                <li class="nav-item"><a href="/" class="nav-link">About</a></li>
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search Modal Section  -->
+        <div class="modal fade search-modal" id="search_box">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <form action="/search" class="form">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="search"
+                      class="form-control search"
+                      id="search"
+                      placeholder="Search Something..."
+                    />
+                    <button type="submit" class="btn search-btn">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Search Modal Section End -->
+      </header>
+      <!-- Header Section End -->
+
+      <main>
+        <div class="section-bg">
+          <div class="py-5 bg-dark">
+            <div class="py-4 bg-dark"></div>
+          </div>
+        </div>
+        <div class="container user-card">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <div class="profile-wrap">
+                <div class="card mb-5">
+                  <div
+                    class="card-body d-flex flex-column justify-content-center"
+                  >
+                    <div class="user-avatar d-flex justify-content-center mb-4">
+                      <img
+                        src="../images/grid/3.a433b89d.jpg"
+                        alt=""
+                        class="img-fluid bg-dark"
+                      />
+                    </div>
+                    <div class="user-info text-center">
+                      <h3 class="user-name mb-3">Mehedi Hassan</h3>
+                      <p class="">Web Application Developer</p>
+                      <p class="small">Kushtia, Bangladesh</p>
+                      <a href="/" class="btn btn-success">Edit Profile</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-heading">
+            <div class="pb-5">
+              <h3 class="text-center text-secondary heading">Post's Of <span class="text-success">Mehedi Hassan</span></h3>
+            </div>
+          </div>
+
+          <div class="animals-wrap">
+            <div class="row">
+              
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="animal-img mb-2">
+                      <div class="img">
+                        <img
+                          src="../images/grid/3.a433b89d.jpg"
+                          alt=""
+                          class="img-fluid"
+                        />
+                      </div>
+                      <h2 class="animal-name text-right">
+                        <span>Royal Bengle Tiger</span>
+                      </h2>
+                    </div>
+                    <div class="animal-info">
+                      <p class="animal-cat">Domestic Animal</p>
+                      <div class="details">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing...
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Age</div>
+                        <div class="col-6 text-center mb-2">60 Years</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Weight</div>
+                        <div class="col-6 text-center mb-2">50 Kg</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="/" class="btn btn-block btn-success detail-btn">Details</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="animal-img mb-2">
+                      <div class="img">
+                        <img
+                          src="../images/grid/3.a433b89d.jpg"
+                          alt=""
+                          class="img-fluid"
+                        />
+                      </div>
+                      <h2 class="animal-name text-right">
+                        <span>Royal Bengle Tiger</span>
+                      </h2>
+                    </div>
+                    <div class="animal-info">
+                      <p class="animal-cat">Domestic Animal</p>
+                      <div class="details">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing...
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Age</div>
+                        <div class="col-6 text-center mb-2">60 Years</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Weight</div>
+                        <div class="col-6 text-center mb-2">50 Kg</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="/" class="btn btn-block btn-success detail-btn">Details</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="animal-img mb-2">
+                      <div class="img">
+                        <img
+                          src="../images/grid/3.a433b89d.jpg"
+                          alt=""
+                          class="img-fluid"
+                        />
+                      </div>
+                      <h2 class="animal-name text-right">
+                        <span>Royal Bengle Tiger</span>
+                      </h2>
+                    </div>
+                    <div class="animal-info">
+                      <p class="animal-cat">Domestic Animal</p>
+                      <div class="details">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing...
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Age</div>
+                        <div class="col-6 text-center mb-2">60 Years</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Weight</div>
+                        <div class="col-6 text-center mb-2">50 Kg</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="/" class="btn btn-block btn-success detail-btn">Details</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="animal-img mb-2">
+                      <div class="img">
+                        <img
+                          src="../images/grid/3.a433b89d.jpg"
+                          alt=""
+                          class="img-fluid"
+                        />
+                      </div>
+                      <h2 class="animal-name text-right">
+                        <span>Royal Bengle Tiger</span>
+                      </h2>
+                    </div>
+                    <div class="animal-info">
+                      <p class="animal-cat">Domestic Animal</p>
+                      <div class="details">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing...
+                        </p>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Age</div>
+                        <div class="col-6 text-center mb-2">60 Years</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 text-center mb-2">Max-Weight</div>
+                        <div class="col-6 text-center mb-2">50 Kg</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="/" class="btn btn-block btn-success detail-btn">Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination-wrap pt-5 pb-3">
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item"><a href="/" class="page-link">&laquo</a></li>
+                <li class="page-item"><a href="/" class="page-link">01</a></li>
+                <li class="page-item"><a href="/" class="page-link">02</a></li>
+                <li class="page-item"><a href="/" class="page-link">&raquo</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+      <!-- Main Section End -->
+
+      <!-- Footer Copyright Section -->
+      <footer>
+        <div class="container py-3">
+          <p class="lead text-center">
+            &copy; 2021 All Rights Reserved <a href="/">Animalia</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/fa-icon.js"></script>
+  </body>
+</html>

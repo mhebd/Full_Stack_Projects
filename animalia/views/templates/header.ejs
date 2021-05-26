@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animalia | Animal's House</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header Section Start -->
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark nav-wrap">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/home" class="h3 logo">Animalia</a>
+            </div>
+
+            <div class="ml-auto d-flex ml-md-1 order-1 order-md-2">
+              <ul class="navbar-nav mr-2">
+                <% if(user) { %>
+                <li class="nav-item profile-dd">
+                  <a
+                    href="/user/<%= user._id %>?page=1&limit=6"
+                    class="nav-link"
+                  >
+                    <img
+                      src="../images/user/<%= user.user_avatar %>"
+                      alt=""
+                      class="img-fluid profile-avatar"
+                    />
+                  </a>
+                  <div class="profile-ddm">
+                    <a
+                      href="/user/<%= user._id %>?page=1&limit=6"
+                      class="dropdown-item"
+                      >Your Profile</a
+                    >
+                    <a href="/post-animal" class="dropdown-item">New Animal</a>
+                    <a href="/logout" class="dropdown-item text-danger"
+                      >Log Out</a
+                    >
+                  </div>
+                </li>
+                <% } else { %>
+                <li class="nav-item">
+                  <a href="/login" class="btn btn-success">Login</a>
+                </li>
+                <% } %>
+              </ul>
+              <button
+                class="btn sm-btn"
+                data-toggle="modal"
+                data-target="#search_box"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <button
+              class="navbar-toggler order-2 ml-2"
+              data-toggle="collapse"
+              data-target="#main_menu"
+            >
+              <span class="sr-only">navbar toggler icon</span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse order-2 order-md-1"
+              id="main_menu"
+            >
+              <ul class="navbar-nav navbar-wrap ml-auto">
+                <li class="nav-item <% if(active === 'home') {%> active <%}%>">
+                  <a href="/home" class="nav-link">Home</a>
+                </li>
+                <li
+                  class="nav-item <% if(active === 'animal') {%> active <%}%>"
+                >
+                  <a href="/animals?page=1&limit=12" class="nav-link"
+                    >Animals</a
+                  >
+                </li>
+                <li class="nav-item<% if(active === 'about') {%> active <%}%>">
+                  <a href="/about" class="nav-link">About</a>
+                </li>
+                <li
+                  class="nav-item <% if(active === 'contact') {%> active <%}%>"
+                >
+                  <a href="/contact" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search Modal Section  -->
+        <div class="modal fade search-modal" id="search_box">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <form action="/search" method="get" class="form">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="q"
+                      class="form-control search"
+                      id="search"
+                      placeholder="Search Something..."
+                    />
+                    <input type="text" name="page" value="1" hidden />
+                    <input type="text" name="limit" value="12" hidden />
+                    <button type="submit" class="btn search-btn">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Search Modal Section End -->
+      </header>
+      <!-- Header Section End -->
+    </div>
+  </body>
+</html>

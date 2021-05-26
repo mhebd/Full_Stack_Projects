@@ -1,0 +1,43 @@
+<%- include('templates/header', {active : 'newimage', login: true, userId: user._id, title: 'New Image'}); -%>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 order-2 order-md-1">
+              <div class="section-heading py-5">
+                <h3 class="text-primary">Upload New Image</h3>
+              </div>
+              <div class="post-card-wrap">
+
+                <div class="single-card card mb-5">
+                  <form action="/newimage" method="POST" class="form" enctype="multipart/form-data">
+                    <div class="card-body">
+                      <div class="input-group mb-3">
+                        <input type="file" name="photo" id="photo" class="form-control photo">
+                      </div>
+                      <div class="input-group mb-3">
+                        <textarea name="details" id="details" cols="30" rows="10" class="details form-control"></textarea>
+                      </div>
+                      <div class="input-group">
+                        <button type="submit" class="btn btn-success">Create New Post</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-4 order-1">
+              <%- include('templates/userinfo'); %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animalia | Animal's House</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Codrops" />
+    <!-- <link rel="shortcut icon" href="favicon.26242483.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+  </head>
+  <body class="home loading">
+    <main>
+      <div class="content">
+        <div class="grid">
+          <% let i = 1; animals.forEach(animal => { %>
+          <div class="grid__item pos-<%= i++ %>">
+            <div
+              class="grid__item-img"
+              style="
+                background-image: url('../images/post/<%= animal.cover_image %>');
+              "
+            ></div>
+          </div>
+          <% }) %>
+        </div>
+        <h2 class="content__title no-select">
+          <span>Animalia</span
+          ><span class="content__title-sub"
+            >- One & Only Animal Info House</span
+          >
+        </h2>
+        <div class="btn-wrap">
+          <a href="/about" class="btn">About</a>
+          <a href="/animals" class="btn">Animals</a>
+          <a href="/contact" class="btn">Contact</a>
+        </div>
+      </div>
+    </main>
+    <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+      <circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
+    </svg>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

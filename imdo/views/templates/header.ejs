@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Window | <%= title %></title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header-wrap">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <div class="navbar-brand">
+              <h3 class="">
+                <a href="/" class="text-light">ImDo</a>
+              </h3>
+            </div>
+            <button
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-nav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar-nav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a
+                    href="/"
+                    class="nav-link <% if(active === 'home') { %> active <% } %>"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="/user/<%= userId %>"
+                    class="nav-link <% if(active === 'profile') { %> active <% } %>"
+                    >Profile</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="/newimage"
+                    class="nav-link <% if(active === 'newimage') { %> active <% } %>"
+                    >Create Image</a
+                  >
+                </li>
+                <% if(login) { %>
+                <li class="nav-item">
+                  <!-- <a href="/logout" class="btn btn-danger ms-lg-3"> Logout </a> -->
+                  <button class="btn btn-danger" onclick="logout()">
+                    Logout
+                  </button>
+                </li>
+                <% } %>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <script src="../js/reqController.js"></script>
+  </body>
+</html>

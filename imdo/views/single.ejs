@@ -1,0 +1,118 @@
+<%- include('templates/header', {active: 'home', login: true, userId: user._id, title: image._id } ); -%>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 order-2 order-md-1 mt-5">
+              <div class="post-card-wrap">
+                <!-- single card start -->
+                
+
+                <div class="single-card card mb-3">
+                  <div class="card-header d-flex">
+                    <% users.forEach(user => { 
+                      if(user._id.toString() === image.user_id.toString()) {
+                        <!-- console.log(user); -->
+                        %> 
+                          <div class="user-img me-3">
+                            <img
+                              class="border border-1 border-primary rounded-circle"
+                              src="../img/user/<%= user.userImage %>"
+                              alt=""
+                            />
+                          </div>
+                          <div class="user-info">
+                            <a href="/user/<%= user._id %>" class="h4 name"><%= user.name %></a>
+                            <p class="small desc"><%= user.short_desc %></p>
+                          </div>
+                        <%
+                      }
+                    }) %>
+
+                  </div>
+                  <div class="card-body">
+                    <div class="post-detail">
+                      <p class="lead"><%= image.details %></p>
+                    </div>
+                    <div class="post-img">
+                      <a href="/image/<%= image._id %>">
+                        <img src="../img/post/<%= image.image %>" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-6 d-grid">
+                        <button class="btn btn-secondary like-btn <% 
+                          if(image.likes.includes(user._id)) {
+                        %> btn-success <%
+                          }
+                        %>" onclick="updateLike(`<%= image._id %>`, `<%= user._id %>`)">
+                          Likes (<%= image.likes.length %>)
+                        </button>
+                      </div>
+                      <div class="col-6 d-grid">
+                        <button class="btn btn-secondary">Comments (<%= image.comments.length %>)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comment-card card mb-5">
+                  <div class="card-body">
+                    <% if(image.comments) {
+                      image.comments.forEach(comment => {
+                        %> 
+                          <div class="card comment mb-3">
+                            <div class="card-header d-flex">
+                              <div class="user-img me-3">
+                                <img src="../img/user/<%= comment.user_image %>" alt="<%= comment.user_name%>" class="rounded-circle border border-1 border-secondary">
+                              </div>
+                              <a href="/user/<%= comment.user_id %>" class="h4 name mt-2 me-1"><%= comment.user_name %></a> <span class="mt-3"> Says,</span>
+                            </div>
+                            <div class="card-body">
+                              <p class="lead"><%= comment.comment %></p>
+                            </div>
+                          </div>
+                        <%
+                      }) 
+                    } else {
+                      %> <p class="lead">No Comment Found</p> <% 
+                    } %>
+                  </div>
+                  <div class="card-footer">
+                    <h3 class="text-secondary mb-3">Leave a Comment...</h3>
+                    <form action="/image/<%= image._id %>" method="POST" class="form">
+                      <div class="hidden-input">
+                        <input type="hidden" name="userId" value="<%= user._id %>"class="userId" id="userId">
+                        <input type="hidden" name="userName" value="<%= user.name %>" class="userName" id="userName">
+                        <input type="hidden" name="userImage" value="<%= user.userImage %>" class="userImage" id="userImage">
+                      </div>
+                      <div class="input-group mb-3">
+                        <textarea name="comment" id="comment" cols="30" rows="10" class="comment form-control" required></textarea>
+                      </div>
+                      <div class="input-group">
+                        <button class="btn btn-success">Comment</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+
+               
+
+                <!-- single card end -->
+              </div>
+            </div>
+            <div class="col-md-4 order-1">
+              <%- include('templates/userinfo'); %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<%- include('templates/header', {active: 'animal'}) %>
+
+<main>
+  <div class="animal-wrap">
+    <div class="animal-img sa-img">
+      <div class="img d-flex justify-content-center">
+        <img
+          src="../images/post/<%= animal.cover_image %>"
+          alt=""
+          class="img-fluid w-100"
+        />
+      </div>
+      <h2 class="animal-name text-right">
+        <span><%= animal.name %></span>
+      </h2>
+    </div>
+    <div class="container">
+      <div class="animal-info sa-info py-5">
+        <div class="card my-5">
+          <div class="card-body">
+            <div class="animal-info-table">
+              <h3 class="pb-3">#Information</h3>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Property</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>01</th>
+                    <th>Name</th>
+                    <td><%= animal.name %></td>
+                  </tr>
+
+                  <tr>
+                    <th>02</th>
+                    <th>Min-Height</th>
+                    <td>
+                      <%= animal.min_height %> <%= animal.min_height_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>03</th>
+                    <th>Max-Height</th>
+                    <td>
+                      <%= animal.max_height %> <%= animal.max_height_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>04</th>
+                    <th>Min-Length</th>
+                    <td>
+                      <%= animal.min_length %> <%= animal.min_length_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>05</th>
+                    <th>Max-Length</th>
+                    <td>
+                      <%= animal.max_length %> <%= animal.max_length_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>06</th>
+                    <th>Min-Weight</th>
+                    <td>
+                      <%= animal.min_weight %> <%= animal.min_weight_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>07</th>
+                    <th>Max-Weight</th>
+                    <td>
+                      <%= animal.max_weight %> <%= animal.max_weight_unit %>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>08</th>
+                    <th>Max-Age</th>
+                    <td><%= animal.max_age %> <%= animal.max_age_unit %></td>
+                  </tr>
+
+                  <tr>
+                    <th>09</th>
+                    <th>Category</th>
+                    <td><%= animal.category %></td>
+                  </tr>
+
+                  <tr>
+                    <th>10</th>
+                    <th>Living Area</th>
+                    <td><%= animal.living_area %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Only Wonner can see -->
+          <% if(user) { %>
+          <div class="card-footer text-center">
+            <a
+              href="/update-animal/<%= animal._id %>"
+              class="btn btn-success edit-btn"
+              >Edit</a
+            >
+          </div>
+          <% } %>
+        </div>
+
+        <% if(animal.images.length > 0) { %>
+        <div class="animal-images-wrap">
+          <h3 class="text-light pb-3">#Images</h3>
+          <div class="images">
+            <% animal.images.forEach(image => { %>
+            <div class="img">
+              <img
+                src="../images/post/<%= image %>"
+                alt=""
+                class="img-fluid"
+                style="max-height: 350px"
+              />
+            </div>
+            <% }) %>
+          </div>
+        </div>
+        <% } %> <% if(animal.details) { %>
+        <div class="card my-5">
+          <div class="card-body">
+            <div class="details-wrap">
+              <h3 class="text-secomdary pb-3">
+                More In <span class="text-success">Royal Bengle Tiger</span>
+              </h3>
+              <p class="lead"><%= animal.details %></p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+
+        <div class="row mt-4">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="card mb-5">
+              <div class="card-body">
+                <h3 class="text-secondary mb-4"># Posted By :</h3>
+                <div class="row">
+                  <div class="col-3">
+                    <img
+                      src="/images/user/<%= postUser.user_avatar %>"
+                      alt=""
+                      class="img-fluid rounded-circle border border-dark"
+                    />
+                  </div>
+                  <div class="col-9">
+                    <h3 class="">
+                      <a href="/user/<%= postUser._id %>" class="text-secon"
+                        ><%= postUser.first_name %> <%= postUser.last_name %></a
+                      >
+                    </h3>
+                    <p class=""><%= postUser.professional_identity %></p>
+                    <p class="small"><%= postUser.location %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Main Section End -->
+
+<%- include('templates/footer') %>

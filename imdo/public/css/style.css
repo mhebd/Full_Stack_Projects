@@ -1,0 +1,54 @@
+body a {
+  text-decoration: none;
+}
+body .btn:focus,
+body .form-control {
+  box-shadow: 0 0 0 black !important;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.single-card .user-img img,
+.comment .user-img img {
+  width: 60px;
+  height: 60px;
+}
+
+.single-card .post-img {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.single-card .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: container;
+}
+
+.user-images .single-img {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.user-images .single-img img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.user-details .user-img img {
+  width: 200px;
+  height: 200px;
+}
+
+.user-info-wrap .user-image img {
+  width: 200px;
+  height: 200px;
+}

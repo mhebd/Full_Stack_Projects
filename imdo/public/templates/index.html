@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header-wrap">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <a href="#" class="navbar-brand">ImDo</a>
+            <button:button
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-nav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button:button>
+            <div class="navbar-collapse collapse" id="navbar-nav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="btn btn-danger ms-lg-3">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 order-2 order-md-1">
+              <div class="section-heading py-5">
+                <h3 class="text-primary">All Post</h3>
+              </div>
+              <div class="post-card-wrap">
+                <div class="single-card card mb-5">
+                  <div class="card-header d-flex">
+                    <div class="user-img me-3">
+                      <img
+                        class="border border-1 border-primary rounded-circle"
+                        src="../img/user/user-1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="user-info">
+                      <h4 class="name">Mehedi Hassan</h4>
+                      <p class="small desc">Web Application Developer</p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="post-img">
+                      <a href="/">
+                        <img src="../img/post/post-1.jpg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-6 d-grid">
+                        <button class="btn btn-success">Like (120)</button>
+                      </div>
+                      <div class="col-6 d-grid">
+                        <button class="btn btn-secondary">Comment (24)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 order-1">
+              <div
+                class="user-details d-flex flex-column align-items-center mt-5"
+              >
+                <div class="user-img">
+                  <a href="" class="">
+                    <img
+                      src="../img/user/user-1.jpg"
+                      alt=""
+                      class="border border-2 border-success"
+                    />
+                  </a>
+                </div>
+                <div class="user-info mt-3">
+                  <h3 class="name">Mehedi Hassan</h3>
+                  <p class="small"><em>Web Application Developer</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

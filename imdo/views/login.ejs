@@ -1,0 +1,40 @@
+<%- include('templates/header', {active : 'home', login : false, userId: 'not login', title : 'Login'}); %>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 col-12 mx-auto">
+              <div class="section-heading text-center my-5">
+                <h2 class="text-info">Welcome to Image Window...</h2>
+                <p class="lead">Login your free accout now..!</p>
+              </div>
+              <div class="signup-form card">
+                <form action="/login" method="POST" class="form card-body">
+                  <div class="input-group mb-3">
+                    <input type="email" name="email" id="email" class="email form-control" placeholder="Enter your email address">
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="password" name="password" id="password" class="form-control password" placeholder="Enter your password">
+                  </div>
+                  <div class="input-group mb-3 d-grid">
+                    <button type="submit" class="btn btn-info text-light">Login</button>
+                  </div>
+                </form>
+                <div class="card-footer">
+                  <p class="lead">
+                    Not A User? <a href="/signup">Register Now</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

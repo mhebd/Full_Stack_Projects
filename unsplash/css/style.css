@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgb(6, 248, 79), rgb(3, 235, 252));
+  min-height: 100vh;
+}
+
+.container-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container {
+  padding: 10px;
+}
+
+.form-group .search {
+  width: 300px;
+  padding: 7px 12px;
+  font-size: 1em;
+}
+
+.form-group .submit {
+  background: tomato;
+  color: white;
+  padding: 10px 20px;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+}

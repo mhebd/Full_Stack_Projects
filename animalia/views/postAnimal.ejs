@@ -1,0 +1,293 @@
+<%- include('templates/header', {active : ''}) %>
+
+<main>
+  <div class="container">
+    <div class="section-heading">
+      <div class="py-5">
+        <h3 class="text-center text-secondary heading">Post A New Animal</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mb-5 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <form
+              action="/post-animal"
+              method="post"
+              enctype="multipart/form-data"
+              class="form"
+            >
+              <div class="form-group mb-3">
+                <label for="name"
+                  >Animal Name : <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Enter Animal Name"
+                  class="name form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="name"
+                  >Scientific Name : <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  name="s_name"
+                  id=""
+                  placeholder="Enter Scientific Name"
+                  class="name form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_height">Max-Height :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_height"
+                      placeholder="Enter Max-Height"
+                      id=""
+                      class="max-height form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_height_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm">mm</option>
+                      <option value="cm">cm</option>
+                      <option value="m">m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_height">Min-Height :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_height"
+                      placeholder="Enter Min-Height"
+                      id=""
+                      class="min-hieght form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_height_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm">mm</option>
+                      <option value="cm">cm</option>
+                      <option value="m">m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_length">Max-Length :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_length"
+                      placeholder="Enter Max-Length"
+                      id=""
+                      class="max-length form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_length_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm">mm</option>
+                      <option value="cm">cm</option>
+                      <option value="m">m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_length">Min-Length :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_length"
+                      placeholder="Enter Min-Length"
+                      id=""
+                      class="min-length form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_length_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm">mm</option>
+                      <option value="cm">cm</option>
+                      <option value="m">m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_weight">Max-Weight :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_weight"
+                      placeholder="Enter Max-Weight"
+                      id=""
+                      class="max-weight form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_weight_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="gm">gm</option>
+                      <option value="kg">kg</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_weight">Min-Weight :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_weight"
+                      placeholder="Enter Min-Weight"
+                      id=""
+                      class="min-weight form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_weight_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="gm">gm</option>
+                      <option value="kg">kg</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_age">Max-Age :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_age"
+                      placeholder="Enter Max-Age"
+                      id=""
+                      class="max-age form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select name="max_age_unit" class="form-control unit" id="">
+                      <option value="year">Year</option>
+                      <option value="month">Month</option>
+                      <option value="day">Day</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="type">Animal Type :</label>
+                <select name="type" id="" class="type form-control">
+                  <option value="Domestic" selected>Domestic Animal</option>
+                  <option value="Wildlife">Wildlife Animal</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="living_area">Living Area :</label>
+                <input
+                  type="text"
+                  name="living_area"
+                  placeholder="Enter Living Area [Like - Bangladesh, India, UK, USA]"
+                  id=""
+                  class="living-area form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="cover_image"
+                  >Cover Image : <span class="text-danger">*</span></label
+                >
+                <input
+                  type="file"
+                  name="cover_image"
+                  id=""
+                  class="cover-image form-control"
+                  required
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="images">Animal Images :</label>
+                <input
+                  type="file"
+                  name="images"
+                  id=""
+                  class="images form-control"
+                  multiple
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="details">Animal Details :</label>
+                <textarea
+                  name="details"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="details form-control"
+                  placeholder="Enter Animal Details"
+                ></textarea>
+              </div>
+
+              <div class="form-group mb-3">
+                <button type="submit" class="btn btn-success">
+                  Create New One
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Main Section End -->
+<%- include('templates/footer') %>

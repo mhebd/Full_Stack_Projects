@@ -1,0 +1,60 @@
+<%- include('templates/header', {active: 'profile', login: true, userId: user._id, title: user.name} ); -%>
+
+      <main>
+        <div class="container">
+          <div class="user-info-wrap my-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-5 col-sm-6 mb-3">
+                <div class="user-image d-flex align-items-center flex-column">
+                  <img src="../img/user/<%= user.userImage %>" class="border border-3 border-success rounded-circle" alt="">
+                </div>
+              </div>
+              <div class="col-lg-8 col-md-7 col-sm-6">
+                <div class="user-details">
+                  <h3 class="user-name text-cecondary text-uppercase"><%= user.name %></h3>
+                  <p class="samll"><em><%= user.short_desc %></em></p>
+                  <div class="detail">
+                    <p class="lead"><%= user.description %></p>
+                  </div>
+                  <% if(curUser._id.toString() == user._id.toString()) { %>
+                  <div class="edit-btn-wta">
+                    <a href="/edit-profile/<%= user._id %>" class="btn btn-edit-profile btn-success">Edit Profile</a>
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-images">
+            <div class="section-heading py-4">
+              <h3><span class="text-secondary"><%= user.name %></span>'s Images</h3>
+            </div>
+            <div class="row">
+              <%
+                if(!images) {
+                %> No images available <% 
+                } else {
+                  images.forEach(image => {
+                    %> 
+                      <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="single-img">
+                          <a href="/image/<%= image._id %>">
+                            <img src="../img/post/<%= image.image %>" alt="" class="w-100">
+                          </a>
+                        </div>
+                      </div>
+                    <%
+                  })
+                }
+              %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

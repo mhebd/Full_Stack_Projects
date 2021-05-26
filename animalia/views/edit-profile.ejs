@@ -1,0 +1,139 @@
+<%- include('templates/header', {active : ''}) %>
+
+<main>
+  <div class="section-bg">
+    <div class="py-5 bg-dark">
+      <div class="py-4 bg-dark"></div>
+    </div>
+  </div>
+  <div class="container user-card">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="profile-wrap">
+          <div class="card mb-5">
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="user-avatar d-flex justify-content-center mb-4">
+                <img
+                  src="../images/user/<%= user.user_avatar %>"
+                  alt=""
+                  class="img-fluid bg-dark"
+                />
+              </div>
+              <div class="user-info text-center">
+                <h3 class="user-name mb-3">
+                  <%= user.first_name %> <%= user.last_name %>
+                </h3>
+                <% if(user.professional_identity) { %>
+                <p class=""><%= user.professional_identity %></p>
+                <%} %> <% if(user.location) { %>
+                <p class="small"><%= user.location %></p>
+                <%} %>
+
+                <a href="/edit-profile/<%= user._id %>" class="btn btn-success"
+                  >Edit Profile</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-heading">
+      <div class="pb-5">
+        <h3 class="text-center text-secondary heading">Edit Your Profile</h3>
+      </div>
+    </div>
+
+    <div class="edit-profile-wrap">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <form
+            action="/edit-profile/<%= user._id %>"
+            method="post"
+            enctype="multipart/form-data"
+            class="form"
+          >
+            <div class="form-group mb-3">
+              <label for="first_name">Your First Name :</label>
+              <input
+                type="text"
+                name="first_name"
+                value="<%= user.first_name %>"
+                id=""
+                class="first-name form-control"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="last_name">Your Last Name :</label>
+              <input
+                type="text"
+                name="last_name"
+                value="<%= user.last_name %>"
+                id=""
+                class="last-name form-control"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="professional_identity"
+                >Your Professional Identity :</label
+              >
+              <input
+                type="text"
+                name="professional_identity"
+                value="<%= user.professional_identity %>"
+                id=""
+                class="professional-identity form-control"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="location">Your Location :</label>
+              <input
+                type="text"
+                name="location"
+                value="<%= user.location %>"
+                id=""
+                class="location form-control"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="user_avatar">Your Avatar :</label>
+              <input
+                type="file"
+                name="user_avatar"
+                id=""
+                class="user-avatar form-control"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="biodata">Your Biodata :</label>
+              <textarea
+                name="biodata"
+                id=""
+                cols="30"
+                rows="10"
+                class="biodata form-control"
+              >
+<%= user.biodata %></textarea
+              >
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Main Section End -->
+
+<%- include('templates/footer') %>

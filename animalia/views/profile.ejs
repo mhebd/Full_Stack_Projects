@@ -1,0 +1,155 @@
+<%- include('templates/header', {active : 'profile'}) %>
+
+<main>
+  <div class="section-bg">
+    <div class="py-5 bg-dark">
+      <div class="py-4 bg-dark"></div>
+    </div>
+  </div>
+  <div class="container user-card">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="profile-wrap">
+          <div class="card mb-5">
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="user-avatar d-flex justify-content-center mb-4">
+                <img
+                  src="../images/user/<%= user.user_avatar %>"
+                  alt=""
+                  class="img-fluid bg-dark"
+                />
+              </div>
+              <div class="user-info text-center">
+                <h3 class="user-name mb-3">
+                  <%= user.first_name %> <%= user.last_name %>
+                </h3>
+                <% if(user.professional_identity) { %>
+                <p class=""><%= user.professional_identity %></p>
+                <%} %> <% if(user.location) { %>
+                <p class="small"><%= user.location %></p>
+                <%} %> <% if(user.biodata) { %>
+                <div class="card mb-5">
+                  <div class="card-header">
+                    <p class="lead"><%= user.biodata %></p>
+                  </div>
+                </div>
+                <% } %>
+
+                <a href="/edit-profile/<%= user._id %>" class="btn btn-success"
+                  >Edit Profile</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-heading">
+      <div class="pb-5">
+        <h3 class="text-center text-secondary heading">
+          Posts Of
+          <span class="text-success"
+            ><%= user.first_name %> <%= user.last_name %></span
+          >
+        </h3>
+      </div>
+    </div>
+
+    <div class="animals-wrap">
+      <div class="row">
+        <% animals.forEach(animal => { %>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="animal-img mb-2">
+                <div class="img">
+                  <img
+                    src="../images/post/<%= animal.cover_image %>"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <h2 class="animal-name text-right">
+                  <span><%= animal.name %></span>
+                </h2>
+              </div>
+              <div class="animal-info">
+                <p class="animal-cat"><%= animal.category %> Animal</p>
+
+                <% if(animal.details) { %>
+                <div class="details">
+                  <p>
+                    <%= animal.details.split(' ').slice(0, 10).join(' ') %>...
+                  </p>
+                </div>
+                <% } %>
+
+                <div class="row">
+                  <div class="col-6 text-center mb-2">Max-Age</div>
+                  <div class="col-6 text-center mb-2">
+                    <%= animal.max_age %> <%= animal.max_age_unit %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 text-center mb-2">Max-Weight</div>
+                  <div class="col-6 text-center mb-2">
+                    <%= animal.max_weight %> <%= animal.max_weight_unit %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center">
+              <a
+                href="/animals/<%= animal._id %>"
+                class="btn btn-block btn-success detail-btn"
+                >Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <% if(count > 0) { %>
+    <div class="pagination-wrap pt-5 pb-3">
+      <nav>
+        <ul class="pagination justify-content-center">
+          <% if(p > 1) { %>
+          <li class="page-item">
+            <a
+              href="/user/<%= user._id %>?page=<%= p -1 %>&limit=<%= l %>"
+              class="page-link"
+              >&laquo</a
+            >
+          </li>
+          <% } %> <% let limit = 6; let page = Math.ceil(count / limit); for(let
+          i=1; i <= page; i++) { %>
+          <li class="page-item <% if(i === p) {%> active <% } %>">
+            <a
+              href="/user/<%= user._id %>?page=<%= i %>&limit=<%= limit %>"
+              class="page-link"
+              ><%= i %></a
+            >
+          </li>
+          <%}%> <% if(p < page) { %>
+          <li class="page-item">
+            <a
+              href="/user/<%= user._id %>?page=<%= p + 1 %>&limit=<%= l %>"
+              class="page-link"
+              >&raquo</a
+            >
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+    <% } %>
+  </div>
+</main>
+<!-- Main Section End -->
+
+<%- include('templates/footer') %>

@@ -1,0 +1,287 @@
+<%- include('templates/header', {active : ''}) %>
+
+<main>
+  <div class="container">
+    <div class="section-heading">
+      <div class="py-5">
+        <h3 class="text-center text-secondary heading">
+          Update <span class="text-success"><%= animal.name %><span
+          ></span>
+        </h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mb-5 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <form
+              action="/update-animal/<%= animal._id %>"
+              method="post"
+              enctype="multipart/form-data"
+              class="form"
+            >
+              <div class="form-group mb-3">
+                <label for="name">Animal Name :</label>
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  value="<%= animal.name %>"
+                  class="name form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="name">Scientific Name :</label>
+                <input
+                  type="text"
+                  name="s_name"
+                  id=""
+                  value="<%= animal.scientific_name %>"
+                  class="name form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_height">Max-Height :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_height"
+                      value="<%= animal.max_height %>"
+                      id=""
+                      class="max-height form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_height_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm" <% if(animal.max_height_unit === 'mm') { %> selected <%} %> >mm</option>
+                      <option value="cm" <% if(animal.max_height_unit === 'cm') { %> selected <%} %> >cm</option>
+                      <option value="m" <% if(animal.max_height_unit === 'm') { %> selected <%} %> >m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_height">Min-Height :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_height"
+                      value="<%= animal.min_height %>"
+                      id=""
+                      class="min-hieght form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_height_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm" <% if(animal.min_height_unit === 'mm') { %> selected <%} %> >mm</option>
+                      <option value="cm" <% if(animal.min_height_unit === 'cm') { %> selected <%} %> >cm</option>
+                      <option value="m" <% if(animal.min_height_unit === 'm') { %> selected <%} %> >m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_length">Max-Length :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_length"
+                      value="<%= animal.max_length %>"
+                      id=""
+                      class="max-length form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_length_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm" <% if(animal.max_length_unit === 'mm') { %> selected <%} %> >mm</option>
+                      <option value="cm" <% if(animal.min_length_unit === 'cm') { %> selected <%} %> >cm</option>
+                      <option value="m" <% if(animal.min_length_unit === 'm') { %> selected <%} %> >m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_length">Min-Length :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_length"
+                      value="<%= animal.min_length %>"
+                      id=""
+                      class="min-length form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_length_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="mm" <% if(animal.min_length_unit === 'mm') { %> selected <%} %> >mm</option>
+                      <option value="cm" <% if(animal.min_length_unit === 'cm') { %> selected <%} %> >cm</option>
+                      <option value="m" <% if(animal.min_length_unit === 'm') { %> selected <%} %> >m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_weight">Max-Weight :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_weight"
+                      value="<%= animal.max_weight %>"
+                      id=""
+                      class="max-weight form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="max_weight_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="gm" <% if(animal.max_weight_unit === 'gm') { %> selected <%} %> >gm</option>
+                      <option value="kg" <% if(animal.max_weight_unit === 'kg') { %> selected <%} %> >kg</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="min_weight">Min-Weight :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="min_weight"
+                      value="<%= animal.min_weight %>"
+                      id=""
+                      class="min-weight form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select
+                      name="min_weight_unit"
+                      class="form-control unit"
+                      id=""
+                    >
+                      <option value="gm" <% if(animal.min_weight_unit === 'gm') { %> selected <%} %> >gm</option>
+                      <option value="kg" <% if(animal.min_weight_unit === 'kg') { %> selected <%} %> >kg</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="max_age">Max-Age :</label>
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="number"
+                      name="max_age"
+                      value="<%= animal.max_age %>"
+                      id=""
+                      class="max-age form-control"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <select name="max_age_unit" class="form-control unit" id="">
+                      <option value="year" <% if(animal.max_age_unit === 'year') { %> selected <%} %> >Year</option>
+                      <option value="month" <% if(animal.max_age_unit === 'month') { %> selected <%} %> >Month</option>
+                      <option value="day" <% if(animal.max_age_unit === 'day') { %> selected <%} %> >Day</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="type">Animal Type :</label>
+                <select name="type" id="" class="type form-control">
+                  <option value="Domestic" <% if(animal.category === 'Domestic') { %> selected <%} %> >Domestic Animal</option>
+                  <option value="Wildlife" <% if(animal.category === 'Wildlife') { %> selected <%} %> >Wildlife Animal</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="living_area">Living Area :</label>
+                <input
+                  type="text"
+                  name="living_area"
+                  value="<%= animal.living_area %>"
+                  id=""
+                  class="living-area form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="cover_image">Cover Image :</label>
+                <input
+                  type="file"
+                  name="cover_image"
+                  id=""
+                  class="cover-image form-control"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="images">Animal Images :</label>
+                <input
+                  type="file"
+                  name="images"
+                  id=""
+                  class="images form-control"
+                  multiple
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="details">Animal Details :</label>
+                <textarea
+                  name="details"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="details form-control"
+                  value="Enter Animal Details"
+                ><%= animal.details %></textarea>
+              </div>
+
+              <div class="form-group mb-3">
+                <button type="submit" class="btn btn-success">
+                  Update & Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Main Section End -->
+<%- include('templates/footer') %>

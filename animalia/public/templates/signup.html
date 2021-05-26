@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animalia | Animal's House</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header Section Start -->
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark nav-wrap">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="/home" class="h3 logo">Animalia</a>
+            </div>
+
+            <div class="ml-auto d-flex ml-md-1 order-1 order-md-2">
+              <ul class="navbar-nav mr-2">
+                <li class="nav-item profile-dd">
+                  <a href="#" class="nav-link"
+                    >
+                      <img src="../images/grid/3.a433b89d.jpg" alt="" class="img-fluid profile-avatar">
+                    </a
+                  >
+                  <div class="profile-ddm">
+                    <a href="/" class="dropdown-item">Your Profile</a>
+                    <a href="/" class="dropdown-item">New Animal</a>
+                    <a href="/" class="dropdown-item">Log Out</a>
+                  </div>
+                </li>
+                <!-- <li class="nav-item"><a href="/" class="btn btn-danger">Login</a></li> -->
+              </ul>
+              <button
+                class="btn sm-btn"
+                data-toggle="modal"
+                data-target="#search_box"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <button
+              class="navbar-toggler order-2 ml-2"
+              data-toggle="collapse"
+              data-target="#main_menu"
+            >
+              <span class="sr-only">navbar toggler icon</span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse order-2 order-md-1"
+              id="main_menu"
+            >
+              <ul class="navbar-nav navbar-wrap ml-auto">
+                <li class="nav-item active">
+                  <a href="/home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Animals</a>
+                </li>
+                <li class="nav-item"><a href="/" class="nav-link">About</a></li>
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search Modal Section  -->
+        <div class="modal fade search-modal" id="search_box">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <form action="/search" class="form">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="search"
+                      class="form-control search"
+                      id="search"
+                      placeholder="Search Something..."
+                    />
+                    <button type="submit" class="btn search-btn">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Search Modal Section End -->
+      </header>
+      <!-- Header Section End -->
+
+      <main>
+        <div class="container">
+          <div class="section-heading">
+            <div class="py-5">
+              <h3 class="text-center text-secondary heading">Create New Account</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mb-5 mx-auto">
+              <div class="card">
+                <div class="card-body">
+                  <form action="/" class="form">
+                    <div class="form-group mb-3">
+                      <label for="fname">First Name :</label>
+                      <input type="text" name="fname" placeholder="Enter Your First Name" id="" class="f-name form-control">
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label for="lname">Last Name :</label>
+                      <input type="text" name="lname" placeholder="Enter Your Last Name" id="" class="l-name form-control">
+                    </div>
+
+                    <div class="from-group mb-3">
+                      <label for="email">Your Email :</label>
+                      <input type="email" name="email" placeholder="Enter Your Email" id="" class="email form-control">
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label for="password">Your Password :</label>
+                      <input type="password" name="password" placeholder="Enter Your Password" id="" class="password form-control">
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <button type="submit" class="btn btn-success">Sign Up</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="card-footer">
+                  <p class="lead">Have an account? <a href="/login" class="">Login Now</a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Main Section End -->
+
+      <!-- Footer Copyright Section -->
+      <footer>
+        <div class="container py-3">
+          <p class="lead text-center">
+            &copy; 2021 All Rights Reserved <a href="/">Animalia</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/fa-icon.js"></script>
+  </body>
+</html>

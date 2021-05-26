@@ -1,0 +1,74 @@
+<%- include('templates/header', {active: 'home', login: true, userId: user._id, title: 'Homes' } ); -%>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 order-2 order-md-1 mt-5">
+              <div class="post-card-wrap">
+                <!-- single card start -->
+                <% images.forEach(image => { %>
+
+                <div class="single-card card mb-5">
+                  <div class="card-header d-flex">
+                    <% users.forEach(user => { 
+                      if(user._id.toString() === image.user_id.toString()) {
+                        <!-- console.log(user); -->
+                        %> 
+                          <div class="user-img me-3">
+                            <img
+                              class="border border-1 border-primary rounded-circle"
+                              src="../img/user/<%= user.userImage %>"
+                              alt=""
+                            />
+                          </div>
+                          <div class="user-info">
+                            <a href="/user/<%= user._id %>" class="h4 name"><%= user.name %></a>
+                            <p class="small desc"><%= user.short_desc %></p>
+                          </div>
+                        <%
+                      }
+                    }) %>
+
+                  </div>
+                  <div class="card-body">
+                    <div class="post-img">
+                      <a href="/image/<%= image._id %>">
+                        <img src="../img/post/<%= image.image %>" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-6 d-grid">
+                        <button class="btn btn-secondary like-btn <% 
+                          if(image.likes.includes(user._id)) {
+                        %> btn-success <%
+                          }
+                        %>" onclick="updateLike(`<%= image._id %>`, `<%= user._id %>`)">
+                          Likes (<%= image.likes.length %>)
+                        </button>
+                      </div>
+                      <div class="col-6 d-grid">
+                        <a href="/image/<%= image._id %>" class="btn btn-secondary">Comments (<%= image.comments.length %>)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <% }) %>
+
+                <!-- single card end -->
+              </div>
+            </div>
+            <div class="col-md-4 order-1">
+              <%- include('templates/userinfo'); %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<%- include('templates/header', {active: 'profile', login: true, userId: user._id, title: 'Edit Profile'} ); -%>
+
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 order-2 order-md-1 mt-5">
+              <div class="edit-profile-form-wrap card">
+                <div class="card-header">
+                  <h3 class="text-secondar">Edit Your Profile</h3>
+                </div>
+                <div class="card-body">
+                  <form action="/edit-profile/<%= user._id %>" method="post" class="form">
+                    <div class="form-group mb-3">
+                      <label for="name">Input your name :</label>
+                      <input type="text" name="name" class="name form-control" id="name" value="<%= user.name %>">
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="short_desc">Your professional Identity :</label>
+                      <input type="text" name="short_desc" id="short-desc" class="short-desc form-control" value="<%= user.short_desc %>">
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="description">About yourself :</label>
+                      <textarea name="description" id="desc" cols="30" rows="10" class="desc form-control"><%= user.description %></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                      <button type="submit" class="btn btn-success text-light">Save Info</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 order-1">
+              <%- include('templates/userinfo'); %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>
