@@ -1,0 +1,29 @@
+{
+  "name": "friends-forever",
+  "version": "1.0.0",
+  "description": "Friends forever is a social media web application. It's made by NODE, React, Mongoose & Express etc.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn server\" \"yarn client \" ", 
+    "heroku-postbuild": "yarn --cwd client install && yarn --cwd client build"
+  },
+  "author": "M. Hassan",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^6.2.0"
+  }
+}
