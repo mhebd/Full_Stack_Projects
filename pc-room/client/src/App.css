@@ -1,0 +1,15 @@
+.container-fluid {
+	box-sizing: border-box;
+	position: relative;
+	height: 100vh;
+}
+
+.container-fluid .btn, .container-fluid .form-control {
+	border-radius: 0px;
+	outline: none;
+	border: 0px;
+}
+
+.container-fluid .btn:focus, .container-fluid .form-control:focus {
+	box-shadow: 0 0 0 black;
+}

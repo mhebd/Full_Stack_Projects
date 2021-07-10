@@ -1,0 +1,12 @@
+.home-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	transform: translate(-50%, -50%);
+}
+
+.heading-wrap {
+	border-bottom: 2px solid #fff;
+	margin-bottom: 20px;
+}

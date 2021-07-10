@@ -1,0 +1,21 @@
+{
+  "name": "public-chat-room",
+  "version": "1.0.0",
+  "description": "This is a public open chat room...",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn server\" \"yarn client\" "
+  },
+  "author": "M. Hassan",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.1.2"
+  }
+}
